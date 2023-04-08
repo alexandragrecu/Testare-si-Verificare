@@ -71,3 +71,78 @@ Clasele intrarilor:
     C_14 = {N, M, K, (mi, ci) | ci in ci_6, N, M, K, mi - toate valide si iesirea i_6}
     
 """
+
+class TestStampMinCost(unittest.TestCase):
+    def test_C_1(self):
+        N, M, K, intervals, expected = (1, 1, 1, [(1, 1)], 1)
+        result = min_cost_to_buy_stamps((N, M, K, intervals))
+        self.assertEqual(result, expected)
+
+    def test_C_2(self):
+        N, M, K, intervals, expected = (1000, 10, 1000, [(1000 * i, 1) for i in range(1, 11)], 1)
+        result = min_cost_to_buy_stamps((N, M, K, intervals))
+        self.assertEqual(result, expected)
+        print(result)
+
+    def test_C_3(self):
+        N, M, K, intervals, expected = (2, 2, 2, [(2, 1), (3, 2)], 1)
+        result = min_cost_to_buy_stamps((N, M, K, intervals))
+        self.assertEqual(result, expected)
+
+    def test_C_4(self):
+        N, M, K, intervals, expected = (1000, 5, 1000, [(1000 * i, 1) for i in range(1, 6)], 1)
+        result = min_cost_to_buy_stamps((N, M, K, intervals))
+        self.assertEqual(result, expected)
+
+    def test_C_5(self):
+        N, M, K, intervals, expected = (0, 3, 2, [(3, 1), (6, 2), (8, 3)], "N (Numarul de pagini) trebuie sa fie intre 1 si 1000")
+        result = min_cost_to_buy_stamps((N, M, K, intervals))
+        self.assertEqual(result, expected)
+
+    def test_C_6(self):
+        N, M, K, intervals, expected = (1001, 3, 2, [(3, 1), (6, 2), (8, 3)], "N (Numarul de pagini) trebuie sa fie intre 1 si 1000")
+        result = min_cost_to_buy_stamps((N, M, K, intervals))
+        self.assertEqual(result, expected)
+
+    def test_C_7(self):
+        N, M, K, intervals, expected = (5, 0, 2, [(3, 1), (6, 2), (8, 3)], "M (Numarul de intervale) trebuie sa fie intre 1 si 10000")
+        result = min_cost_to_buy_stamps((N, M, K, intervals))
+        self.assertEqual(result, expected)
+
+    def test_C_8(self):
+        N, M, K, intervals, expected = (5, 10001, 2, [(3, 1), (6, 2), (8, 3)], "M (Numarul de intervale) trebuie sa fie intre 1 si 10000")
+        result = min_cost_to_buy_stamps((N, M, K, intervals))
+        self.assertEqual(result, expected)
+
+    def test_C_9(self):
+        N, M, K, intervals, expected = (5, 3, 0, [(3, 1), (6, 2), (8, 3)], "K (Lungimea maxima a intervalelor) trebuie sa fie intre 1 si 1000")
+        result = min_cost_to_buy_stamps((N, M, K, intervals))
+        self.assertEqual(result, expected)
+
+    def test_C_10(self):
+        N, M, K, intervals, expected = (5, 3, 1001, [(3, 1), (6, 2), (8, 3)], "K (Lungimea maxima a intervalelor) trebuie sa fie intre 1 si 1000")
+        result = min_cost_to_buy_stamps((N, M, K, intervals))
+        self.assertEqual(result, expected)
+
+    def test_C_11(self):
+        N, M, K, intervals, expected = (5, 3, 2, [(0, 1), (6, 2), (8, 3)], "mi (Limita superioara a intervalului i) trebuie sa fie intre (0, 100000)")
+        result = min_cost_to_buy_stamps((N, M, K, intervals))
+        self.assertEqual(result, expected)
+
+    def test_C_12(self):
+        N, M, K, intervals, expected = (5, 3, 2, [(100001, 1), (6, 2), (8, 3)], "mi (Limita superioara a intervalului i) trebuie sa fie intre (0, 100000)")
+        result = min_cost_to_buy_stamps((N, M, K, intervals))
+        self.assertEqual(result, expected)
+
+    def test_C_13(self):
+        N, M, K, intervals, expected = (5, 3, 2, [(3, 0), (6, 2), (8, 3)], "ci (Costul intervalului i) trebuie sa fie intre (0 si 10000)")
+        result = min_cost_to_buy_stamps((N, M, K, intervals))
+        self.assertEqual(result, expected)
+
+    def test_C_14(self):
+        N, M, K, intervals, expected = (5, 3, 2, [(3, 10001), (6, 2), (8, 3)], "ci (Costul intervalului i) trebuie sa fie intre (0 si 10000)")
+        result = min_cost_to_buy_stamps((N, M, K, intervals))
+        self.assertEqual(result, expected)
+
+    if __name__ == "__main__":
+        unittest.main()
