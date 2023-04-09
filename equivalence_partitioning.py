@@ -1,6 +1,6 @@
 import unittest
 from main import min_cost_to_buy_stamps
-
+# from main2 import min_cost_to_buy_stamps
 """
 Clasele intrarilor: 
     - N (Numarul de pagini ale clasorului) 0 < N < 1001
