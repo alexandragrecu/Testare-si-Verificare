@@ -1,3 +1,6 @@
+"""
+Non-equivalent mutant that will not be killed
+"""
 def min_cost_to_buy_stamps(input_data):
     '''Returns the minimum cost for buying stamps'''
     N, M, K, intervals = input_data
@@ -19,7 +22,6 @@ def min_cost_to_buy_stamps(input_data):
         if not (1 <= mi <= 100000):
             return "mi (Limita superioara a intervalului i) trebuie sa fie intre (0, 100000)"
 
-        # non-equivalent mutant that will not be killed
         # This change allows intervals with a cost of 0,
         # but since the provided test case doesn't have any intervals with a cost of 0, this change won't be detected.
         if not (0 <= ci <= 10000):

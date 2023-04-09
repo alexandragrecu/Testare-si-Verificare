@@ -1,8 +1,4 @@
 """
-Prin schimbarea cheii de sortare în x[0], intervalele vor fi sortate pe baza lui mi (limita superioară a intervalului)
-în loc de ci (costul intervalului). Această schimbare va duce la o logică diferită în selectarea intervalelor pentru
- calcularea costului minim, iar astfel, ieșirea codului mutat va fi diferită față de codul original.
-
  Non-equivalent mutant that will be killed
 """
 def min_cost_to_buy_stamps(input_data):
@@ -29,7 +25,7 @@ def min_cost_to_buy_stamps(input_data):
         if not (1 <= ci <= 10000):
             return "ci (Costul intervalului i) trebuie sa fie intre (0 si 10000)"
 
-    # sort the given intervals by the upper limit, not by cost
+    # sort the given intervals by cost
     intervals.sort(key=lambda x: x[0])
 
     # create a set to store the costs

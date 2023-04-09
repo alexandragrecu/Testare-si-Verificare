@@ -1,13 +1,7 @@
 """
 In acest exemplu, am introdus o noua variabila "min_cost" pentru a stoca valoarea minima de cost din setul de costuri,
  astfel incat functia "min()" sa fie apelata doar o singura data. Aceasta schimbare nu afecteaza functionalitatea sau
- iesirea codului, dar creeaza un mutant echivalent.
-
- Schimbarea pe care am facut-o a fost de a stoca costul minim intr-o variabila numita min_cost inainte de a-l adauga la
- costul total c si apoi de a-l elimina din setul de costuri.
-
-Aceasta schimbare nu altereaza comportamentul sau iesirea codului original, ci doar face codul mai usor de citit.
-Prin urmare, aceasta modificare duce la un mutant echivalent.
+ outputul codului.
 """
 
 def min_cost_to_buy_stamps(input_data):

@@ -21,7 +21,7 @@ test_cases = [
     (1, 1, 1, [(1, 1), (2, 1)], "Numarul de perechi (mi, ci) trebuie sa fie M"),
     (1, 1, 1, [(0, 1)], "mi (Limita superioara a intervalului i) trebuie sa fie intre (0, 100000)"),
     (1, 1, 1, [(1, 0)], "ci (Costul intervalului i) trebuie sa fie intre (0 si 10000)"),
-    (4, 3, 2, [(5, 3), (2, 1), (6, 2)], 3), # input valid + solutie
+    (4, 3, 2, [(5, 3), (2, 1), (6, 2)], 3), # input valid + solutie valida
 ]
 
 for i, (N, M, K, intervals, expected_output) in enumerate(test_cases, start=1):
