@@ -1,6 +1,6 @@
 import unittest
 from main import min_cost_to_buy_stamps
-
+# from main2 import min_cost_to_buy_stamps
 """
 Clasele intrarilor:
     1) N:
@@ -71,7 +71,7 @@ Clasele intrarilor:
 
 """
 
-class TestSolution(unittest.TestCase):
+class TestStampMinCost(unittest.TestCase):
     def test_C_1(self):
         N, M, K, intervals, expected = (1, 1, 1, [(1, 1)], 1)
         self.assertEqual(min_cost_to_buy_stamps((N, M, K, intervals)), expected)
