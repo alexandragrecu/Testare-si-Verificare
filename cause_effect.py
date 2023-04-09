@@ -1,5 +1,6 @@
 import unittest
-from main import min_cost_to_buy_stamps
+# from main import min_cost_to_buy_stamps
+from main3 import min_cost_to_buy_stamps
 
 """
 Clasele intrarilor: 
